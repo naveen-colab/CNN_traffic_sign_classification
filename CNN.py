@@ -60,11 +60,29 @@ model.save("matrix_model.h5")
 
 model.evaluate(X_test,y_test)                           #evaluates the model accuracy
 
-
+#Testing
+p = os.path.join(test_folder_path)  #test_folder_path is the path to the test folder in the kaggle dataset
+test_labels = []
+true_labels = []
+for j in range(len(imgs)):      
+    i = imgs[j]
+    o = Image.open(p +'/'+i)    #to open the image following the path
+    o = o.resize((30,30))
+    im_resize=np.reshape(o,(2700,1)) #resize the shape
+    temp = []
+    temp.append(im_resize.reshape(30,30,3))
+    res=np.argmax(model.predict(np.array(temp)))
+    true_labels.append(labels[j])       #storing the labels of the images
+    test_labels.append(res)  #storing the labels predicted by the model
+    
+    
+#Accuracy with the test data
+from sklearn.metrics import accuracy_score
+print(accuracy_score(true_labels, test_labels))
 
 #confusion matrix 
 def plot_matrix(y_true,pred_y):
-    matrix_labels = unique_labels(k)
+    matrix_labels = unique_labels(true_labels)
     matrix_columns = [f'Predicted{label}' for label in matrix_labels]
     matrix_indexs = [f'Actual {label}' for label in matrix_labels]
     matrix_table = pd.DataFrame(confusion_matrix(y_true,pred_y),column = matrix_columns,row =matrix_indexs)
