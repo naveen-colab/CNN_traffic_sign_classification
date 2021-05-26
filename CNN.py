@@ -1,5 +1,4 @@
 import numpy as np 
-import os
 from PIL import Image
 from sklearn.model_selection import train_test_split
 from keras.utils import to_categorical
