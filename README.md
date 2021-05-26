@@ -34,4 +34,4 @@ Testing:
 
 Conclusions:
             The model acheived a 95% accuracy in classifying the traffic signs.
-            From confusion matrix one can see that classes 1,2,3,4,5 have many misspredictionns compared to other classes because they all are very similar and some classes form these doesn't have enough dark and blurred images(images of traffic sign taken from a speedy car).
+            
