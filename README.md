@@ -14,13 +14,21 @@ The CNN model architecture consists of the following layers:
 2)Convolution 2D Layer : filter= 32 ,kernel size = (5,5)
 
 3)Maxpool 2D : pool size = (2,2)
+
 4)Dropout  : rate = 0.25
+
 5)Convolution 2D Layer : filter= 64 ,kernel size = (3,3)
+
 6)Convolution 2D Layer : filter= 64 ,kernel size = (3,3)
+
 7)Maxpool 2D : pool size = (2,2)
+
 8)Dropout  : rate = 0.25
+
 9)Flatten :  Flattens the layers into 1Dimension
+
 10)Dense fully connected layer : nodes = 256
+
 11)Dropout layer : rate = 0.5
 
 Training: 
