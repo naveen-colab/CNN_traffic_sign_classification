@@ -43,5 +43,5 @@ Testing:
         Use confusion matrix to check  each class accuracy.
 
 Conclusions:
-            The model acheived a 95% accuracy in classifying the traffic signs.
+            The model acheived a 94% accuracy in classifying the traffic signs.
             
