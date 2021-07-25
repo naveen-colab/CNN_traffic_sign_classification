@@ -10,7 +10,9 @@ MODEL ARCHITECTURE
 The CNN model architecture consists of the following layers:
 
 1)Convolution 2D Layer : filter= 32 ,kernel size = (5,5)
+
 2)Convolution 2D Layer : filter= 32 ,kernel size = (5,5)
+
 3)Maxpool 2D : pool size = (2,2)
 4)Dropout  : rate = 0.25
 5)Convolution 2D Layer : filter= 64 ,kernel size = (3,3)
